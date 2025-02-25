@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xarray: Multi-Dimensional Data handling toolkit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: hsl(120, 71%, 99%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(13, 223, 107, 0.1);
+        }
+        h1, h2, h3 {
+            color: #041305;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2b3b2b;
+            color: white;
+            margin-top: 20px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Xarray: Multi-Dimensional Data handling toolkit</h1>
+    </header>
+
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Xarray is a powerful Python library designed to work with labeled multi-dimensional arrays. It is like an extended version of NumPy and Pandas libraries. Xarray is mainly used for scientific data analysis. It is primarily used in the fields of oceanography and climate analysis. Xarray is an essential tool for data scientists and researchers, streamlining the analysis of complex, multi-dimensional datasets. Xarray solves the complexity of working with labeled, multi-dimensional data in scientific and geospatial domains.</p>
+        </section>
+
+        <section id="installation">
+            <h2>Installation & Setup</h2>
+            <p>Installing Xarray is can be done using pip in VS code terminal.:</p>
+            <pre><code>pip install xarray</code></pre>
+            <p>For additional functionality, you can install optional dependencies:</p>
+            <pre><code>pip install "xarray[complete]"</code></pre>
+            <p>This command installs Xarray along with recommended packages for I/O operations, parallel computing, and visualization.</p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features & Explanation</h2>
+            <h3>Works with other tools</h3>
+            <p> Connects well with popular other tools like NumPy, Pandas and file types like NetCDF or HDF5.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-24 233552.png" alt="Xarray working with other tools" width="500">
+            <h3>Easy Calculations</h3>
+            <p>Will do Math or other operations across the data quickly and clearly.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-24 234537.png" alt="Xarray working with other tools" width="500">
+            <h3>Handles Big Data</h3>
+            <p>Can work with large datasets without slowing down or running out of memory.</p>
+            <h3>Powerful Operations</h3>
+            <p>Xarray allows us to perform operations along specific dimensions by name</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-24 235424.png" alt="Xarray working with other tools" width="500">
+            <h3>Handling of missing data</h3>
+            <p>Xarray handles missing data by allowing us to easily identify, fill, or ignore NaN (Not a Number) values during operations.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-24 235810.png" alt="Xarray working with other tools" width="500">
+            <h3>Auto-allignment of data</h3>
+            <p>Xarray automatically aligns data based on coordinates when performing operations. It will be easy to combine data with different shapes or coordinates without manual changes.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-24 235810.png" alt="Xarray working with other tools" width="500">
+            <h3>DataArray and Dataset</h3>
+            <p>Xarray provides two core data structures:</p>
+            <ul>
+                <li><strong>DataArray</strong>: A labeled, multi-dimensional array. It is same as an NumPy array but has some additional metadata.</li>
+                <li><strong>Dataset</strong>: A collection of DataArrays that share the same dimensions and coordinates. It is similar to a dictionary of DataArrays</li>
+            </ul>
+            <h3>Visualization</h3>
+            <p>Xarray integrates with visualization libraries like Matplotlib and Seaborn for easy plotting of multi-dimensional data.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 000622.png" alt="Xarray working with other tools" width="500">
+        </section>
+
+        <section id="code-examples">
+            <h2>Code Examples</h2>
+            <p>Some examples to explain basic functionalities of xarray</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 002053.png" alt="Xarray working with other tools" width="500">
+            <p>The above code explains how to create a simple dataset</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 002416.png" alt="Xarray working with other tools" width="500">
+            <p>The above code explains how to access data uisng .sel and .isel functions.".sel "selects data using label-based indexing (e.g., by coordinate values), while ".isel" selects data using integer-based indexing (e.g., by position).</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 003001.png" alt="Xarray working with other tools" width="500">
+            <p>The above code explains slicing and sunsetting data using xarray.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 003544.png" alt="Xarray working with other tools" width="500">
+            <p>The above code shows performing arithemetic operations on the dataset.</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 003817.png" alt="Xarray working with other tools" width="500">
+            <p>The above code shows how to aggregate data along dimensions</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 004054.png" alt="Xarray working with other tools" width="500">
+            <p>We can group by the data and perform the operations on each group</p>
+            <img src="C:\Users\SANJAY ALLURI\OneDrive\Pictures\Screenshots\Screenshot 2025-02-25 004353.png" alt="Xarray working with other tools" width="500">
+            <p>The above code shows integrating of xarray with matplotlib to plot a graph</p>
+        </section>
+
+        <section id="use-cases">
+            <h2>Use Cases</h2>
+            <ol>
+                <li><strong>Climate Data Analysis</strong>: Xarray excels in handling large-scale climate datasets, allowing researchers to easily work with multi-dimensional data like temperature, pressure, and humidity over time and space.</li>
+                <li><strong>Satellite Image Processing</strong>: The library's ability to handle labeled multi-dimensional arrays makes it ideal for processing and analyzing satellite imagery data.</li>
+                <li><strong>Financial Time Series</strong>: Xarray can be used to analyze complex financial datasets with multiple variables across different time scales.</li>
+            </ol>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Xarray simplifies the process of working with labeled multi-dimensional arrays in Python. Its simple interface, powerful operations, and integration with other Python libraries make it the best tool for data analysis across various domains. Whether you're dealing with climate data, satellite imagery, or any other multi-dimensional dataset, Xarray provides the tools to make the analysis more efficient.</p>
+        </section>
+
+        <section id="references">
+            <h2>References & Further Reading</h2>
+            <ul>
+                <li><a href="https://foundations.projectpythia.org/core/xarray/xarray-intro.html" target="_blank">Xarray Documentation</a></li>
+                <li><a href="https://pypi.org/project/xarray/" target="_blank">Reference</a></li>
+                <li><a href="https://www.researchgate.net/publication/315950787_xarray_N-D_labeled_Arrays_and_Datasets_in_Python" target="_blank">Reference for further readings</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <div class="author-name"> By,<br> Alluri Yashwanth Sanjay Varma(24110030),<br> Nishant Dhankhar(24110223),<br> Aditya Saini(24110012)</div>
+        <div class ="place"><p >Indian Institute Technology Gandhinagar -- ES114</div>
+        <p>&copy; 2025 Xarray Blog</p>
+    </footer>
+    
+</body>
+</html>
+
+</body>
+</html>
